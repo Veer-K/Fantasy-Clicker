@@ -1,0 +1,343 @@
+/* Global Styles for Anime Clicker Game */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* Common button styles */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background-color: #ff8c42;
+  color: #1a365d;
+  border: 2px solid #ff8c42;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #e67e22;
+  border-color: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  padding: 0.5rem 1rem;
+  background-color: #4fc3f7;
+  color: #1a365d;
+  border: 2px solid #4fc3f7;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #29b6f6;
+  border-color: #29b6f6;
+}
+
+.btn-danger {
+  padding: 0.5rem 1rem;
+  background-color: #ef4444;
+  color: white;
+  border: 2px solid #ef4444;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Card styles */
+.card {
+  background-color: rgba(26, 54, 93, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ff8c42;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(255, 140, 66, 0.3);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: #ff8c42;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+/* Input styles */
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  background-color: rgba(45, 90, 135, 0.8);
+  border: 2px solid #4fc3f7;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ff8c42;
+  box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.2);
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+/* Text styles */
+.text-primary {
+  color: #ff8c42;
+}
+
+.text-secondary {
+  color: #4fc3f7;
+}
+
+.text-light {
+  color: #e2e8f0;
+}
+
+.text-muted {
+  color: #94a3b8;
+}
+
+/* Rarity colors */
+.rarity-common {
+  color: #9ca3af;
+}
+
+.rarity-uncommon {
+  color: #10b981;
+}
+
+.rarity-rare {
+  color: #3b82f6;
+}
+
+.rarity-epic {
+  color: #8b5cf6;
+}
+
+.rarity-legendary {
+  color: #f59e0b;
+}
+
+.rarity-mythic {
+  color: #ef4444;
+}
+
+.rarity-secret {
+  color: #ec4899;
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
+}
+
+.gap-4 {
+  gap: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Inventory item hover effects */
+.inventory-item:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 0 20px rgba(255, 140, 66, 0.4) !important;
+  z-index: 10;
+}
+
+/* Smooth scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 54, 93, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 140, 66, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 140, 66, 0.8);
+}
+
+/* InfoBox responsive adjustments */
+@media (max-width: 768px) {
+  .info-box {
+    position: fixed !important;
+    top: 4rem !important;
+    right: 0.5rem !important;
+    left: 0.5rem !important;
+    max-width: none !important;
+    min-width: auto !important;
+    z-index: 999 !important;
+  }
+  
+  .info-box-mobile {
+    font-size: 0.8rem;
+  }
+}
+
+/* Shop layout responsive adjustments */
+@media (max-width: 1024px) {
+  .shop-layout {
+    flex-direction: column !important;
+  }
+  
+  .shop-left, .shop-right {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .shop-right {
+    margin-top: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
